@@ -38,6 +38,7 @@ const FormPresentaionalData = (props) => {
                             <tr>
                                 <th>Email</th>
                                 <th>Password</th>
+                                <th>Delete</th>
                             </tr>
                             {
                                 props.userTableData.map((data, index) => {
@@ -45,6 +46,9 @@ const FormPresentaionalData = (props) => {
                                         <tr key={index}>
                                             <td>{data.email}</td>
                                             <td>{data.password}</td>
+                                            <td>
+                                                <button onClick={()=>props.delete(index)}>Delete</button>
+                                            </td>
                                         </tr>
                                     )
                                 })

@@ -42,6 +42,10 @@ class AddDataInFormContainer extends React.Component {
         else alert("Please Enter Password.");
     }
 
+    delete=(index)=> {
+        if(window.confirm("Do You Want to Delete User")) this.setState({userStoreData : this.state.userStoreData.splice(index,1)});
+    }
+
     render() {
         return(
             <FormPresentational 
